@@ -29,11 +29,8 @@ pipeline{
         stage("Deploy application"){
             steps{
                 sh """
-                docker-compose pull
-
+                    docker-compose pull && -E DB_PASSWORD=${DB_PASSWORD} docker-compose up -d
                 """
-                // docker-compose pull /dd
-                //-E DB_PASSWORD=${DB_PASSWORD} docker-compose up -d
                 }
         }
     }

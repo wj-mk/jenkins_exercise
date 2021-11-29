@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage('Clone directory')
+        stage('Clone directory'){
             steps{
                 sh "rm -r chaperootodo_client"
             }

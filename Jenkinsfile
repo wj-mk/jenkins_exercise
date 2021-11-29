@@ -11,7 +11,7 @@ pipeline{
                 """
             }   
         }
-        stage('Install Docker'){
+        stage('Install Docker and Docker-Compose'){
             steps{//  [! -f get-docker.sh ]
                 sh """
                 if [! -d /usr/local/bin/docker ]

@@ -8,5 +8,6 @@ pipeline{
             steps{
                 sh "git clone https://gitlab.com/qacdevops/chaperootodo_client,"
             }
+        }
     }
 }

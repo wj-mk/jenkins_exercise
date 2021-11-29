@@ -29,7 +29,6 @@ pipeline{
         stage("Deploy application"){
             steps{
                 sh """
-                docker-compose pull && 
                 docker-compose up -d
                 """
                 // docker-compose pull /dd

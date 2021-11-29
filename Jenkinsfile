@@ -19,6 +19,7 @@ pipeline{
                     curl -fsSL https://get.docker.com -o get-docker.sh \
                     chmod u+x get-docker.sh \
                     ./get-docker.sh
+                fi
                 """
             }
         }

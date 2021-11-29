@@ -22,14 +22,14 @@ pipeline{
                 fi
                 """
                 sh """
-                sudo pip install docker-compose
+                pip install docker-compose
                 """
             }
         }
         stage("Deploy application"){
             steps{
                 sh """
-                sudo docker-compose pull && sudo -E DB_PASSWORD=${DB_PASSWORD} docker-compose up -d
+                docker-compose pull && -E DB_PASSWORD=${DB_PASSWORD} docker-compose up -d
                 """
                 // docker-compose pull /dd
                 //-E DB_PASSWORD=${DB_PASSWORD} docker-compose up -d

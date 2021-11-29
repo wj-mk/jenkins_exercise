@@ -13,7 +13,8 @@ pipeline{
         }
         stage('Install Docker'){
             steps{
-                sh "curl https://get.docker.com | sudo bash -S 'sas'"
+                sh "curl -fsSL https://get.docker.com -o get-docker.sh"
+                sh "get-docker.sh"
             }
         }
     }

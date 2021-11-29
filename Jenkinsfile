@@ -22,8 +22,7 @@ pipeline{
                 fi
                 """
                 sh """
-                    curl -L 'https://github.com/docker/compose/releases/download/1.29.2/docker-compose-\$(uname -s)-\$(uname -m)' -o /usr/bin/docker-compose \
-                    chmod +x /usr/bin/docker-compose
+                pip install docker-compose
                 """
             }
         }
@@ -32,7 +31,7 @@ pipeline{
                 sh """
                 docker-compose up -d
                 """
-                // docker-compose pull /
+                // docker-compose pull /dd
                 //-E DB_PASSWORD=${DB_PASSWORD} docker-compose up -d
                 }
         }
